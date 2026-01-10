@@ -2,98 +2,112 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>App Postos Pasqualotto</title>
+<title>Postos Pasqualotto | App</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --preto: #000000;
+  --vermelho: #e30613;
+  --amarelo: #ffd200;
+  --branco: #ffffff;
+}
+
+/* BACKGROUND */
+body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #000000, #1a1a1a);
+
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+    url("background2.jpg") no-repeat center center;
+
+  background-size: contain;
+  background-color: var(--preto);
+
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.container {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 32px 26px;
+/* CARD QUASE INVISÍVEL */
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 22px;
+  width: 90%;
   max-width: 360px;
-  width: 100%;
+  padding: 26px 22px 32px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+  box-shadow: 0 18px 40px rgba(0,0,0,0.5);
 }
 
+/* LOGO */
 .logo {
-  max-width: 160px;
-  margin-bottom: 20px;
+  width: 185px;
+  margin: 0 auto 24px;
+  display: block;
 }
 
+/* TÍTULO EM BRANCO */
 h1 {
-  font-size: 20px;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 14px;
-  color: #555;
+  font-size: 21px;
   margin-bottom: 24px;
+  color: var(--branco);
 }
 
-.button {
+/* BOTÕES PRETOS COM TEXTO BRANCO */
+.btn {
   display: block;
   padding: 14px;
-  border-radius: 10px;
+  margin-bottom: 15px;
+  border-radius: 14px;
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
-  margin-bottom: 14px;
-  color: #fff;
+  background: var(--preto);
+  color: var(--branco);
+  border: 2px solid var(--preto);
 }
 
-.play {
-  background: #e30613;
+/* HOVER (opcional, elegante) */
+.btn:hover {
+  background: #111;
 }
 
-.play:hover {
-  background: #c20510;
-}
-
-.ios {
-  background: #000000;
-}
-
+/* RODAPÉ */
 .footer {
   font-size: 11px;
-  color: #888;
-  margin-top: 18px;
+  color: var(--branco);
+  margin-top: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="card">
 
-  <!-- LOGO (opcional) -->
-  <!--
-  <img src="logo.png" alt="Postos Pasqualotto" class="logo">
-  -->
+  <img src="POSTO.PNG.png" alt="Postos Pasqualotto" class="logo">
 
   <h1>Baixe o App Postos Pasqualotto</h1>
-  <p>
-    Abasteça, acompanhe promoções e aproveite vantagens exclusivas.
-    Você será direcionado automaticamente para a loja do seu celular.
-  </p>
 
-  <a class="button play" href="https://play.google.com/store/apps/details?id=com.argosistemas.postospasqualotto&pcampaignid=web_share">
+  <a class="btn"
+     href="https://play.google.com/store/apps/details?id=com.argosistemas.postospasqualotto&pcampaignid=web_share">
     Baixar na Google Play
   </a>
 
-  <a class="button ios" href="https://apps.apple.com/br/app/postos-pasqualotto/id6752565809">
+  <a class="btn"
+     href="https://apps.apple.com/br/app/postos-pasqualotto/id6752565809">
     Baixar na App Store
   </a>
 
@@ -102,20 +116,6 @@ p {
   </div>
 
 </div>
-
-<script>
-setTimeout(() => {
-  const ua = navigator.userAgent || navigator.vendor || window.opera;
-
-  if (/android/i.test(ua)) {
-    window.location.href =
-      "https://play.google.com/store/apps/details?id=com.argosistemas.postospasqualotto&pcampaignid=web_share";
-  } else if (/iPad|iPhone|iPod/.test(ua)) {
-    window.location.href =
-      "https://apps.apple.com/br/app/postos-pasqualotto/id6752565809";
-  }
-}, 2000);
-</script>
 
 </body>
 </html>

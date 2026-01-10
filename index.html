@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Postos Pasqualotto</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 <style>
 * {
@@ -18,66 +19,90 @@ body {
   min-height: 100vh;
 
   background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+    linear-gradient(
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.55)
+    ),
     url("background2.jpg") no-repeat center center;
 
   background-size: contain;
   background-color: #000;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  padding: 16px;
 }
 
-/* CARD CENTRAL */
+/* CARD — AJUSTE FINO */
 .card {
-  width: 90%;
-  max-width: 360px;
-  padding: 32px 22px 36px;
+  width: 100%;
+  max-width: 270px; /* 👈 MAIS ESTREITO */
+
+  padding: 24px 18px 28px;
   text-align: center;
 
-  background: rgba(255,255,255,0.04); /* QUASE INVISÍVEL */
+  background: rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
 
-  border-radius: 22px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+  border-radius: 24px;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.45);
 }
 
 /* TEXTO */
 h1 {
-  color: #fff;
-  font-size: 21px;
-  margin-bottom: 30px;
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 22px;
 }
 
 /* BOTÕES */
 .btn {
   display: block;
   width: 100%;
-  padding: 15px;
-  margin-bottom: 16px;
 
-  background: #000;
-  color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+
+  background: rgba(255,255,255,0.85);
+  color: #000;
 
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14.5px;
 
-  border-radius: 14px;
-  border: 2px solid #000;
+  border-radius: 16px;
+  border: none;
+
+  transition: transform 0.15s ease, background 0.15s ease;
 }
 
-.btn:hover {
-  background: #111;
+/* TOQUE */
+.btn:active {
+  transform: scale(0.97);
+  background: #fff;
 }
 
 /* RODAPÉ */
 .footer {
-  margin-top: 22px;
-  font-size: 11px;
-  color: #fff;
+  margin-top: 14px;
+  font-size: 10.5px;
+  color: #ffffff;
   opacity: 0.8;
+}
+
+/* TELAS MUITO PEQUENAS */
+@media (max-width: 320px) {
+  .card {
+    max-width: 250px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
 }
 </style>
 </head>
@@ -90,12 +115,12 @@ h1 {
 
   <a class="btn"
      href="https://play.google.com/store/apps/details?id=com.argosistemas.postospasqualotto&pcampaignid=web_share">
-    Baixar na Google Play
+    Google Play
   </a>
 
   <a class="btn"
      href="https://apps.apple.com/br/app/postos-pasqualotto/id6752565809">
-    Baixar na App Store
+    App Store
   </a>
 
   <div class="footer">

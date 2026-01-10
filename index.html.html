@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Postos Pasqualotto | App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --preto: #000000;
+  --vermelho: #e30613;
+  --amarelo: #ffd200;
+  --branco: #ffffff;
+}
+
+/* BACKGROUND */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+    url("background2.jpg") no-repeat center center;
+
+  background-size: contain;
+  background-color: var(--preto);
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD QUASE INVISÍVEL */
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 22px;
+  width: 90%;
+  max-width: 360px;
+  padding: 26px 22px 32px;
+  text-align: center;
+
+  box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+}
+
+/* LOGO */
+.logo {
+  width: 185px;
+  margin: 0 auto 24px;
+  display: block;
+}
+
+/* TÍTULO EM BRANCO */
+h1 {
+  font-size: 21px;
+  margin-bottom: 24px;
+  color: var(--branco);
+}
+
+/* BOTÕES PRETOS COM TEXTO BRANCO */
+.btn {
+  display: block;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  background: var(--preto);
+  color: var(--branco);
+  border: 2px solid var(--preto);
+}
+
+/* HOVER (opcional, elegante) */
+.btn:hover {
+  background: #111;
+}
+
+/* RODAPÉ */
+.footer {
+  font-size: 11px;
+  color: var(--branco);
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <img src="POSTO.PNG.png" alt="Postos Pasqualotto" class="logo">
+
+  <h1>Baixe o App Postos Pasqualotto</h1>
+
+  <a class="btn"
+     href="https://play.google.com/store/apps/details?id=com.argosistemas.postospasqualotto&pcampaignid=web_share">
+    Baixar na Google Play
+  </a>
+
+  <a class="btn"
+     href="https://apps.apple.com/br/app/postos-pasqualotto/id6752565809">
+    Baixar na App Store
+  </a>
+
+  <div class="footer">
+    © Postos Pasqualotto
+  </div>
+
+</div>
+
+</body>
+</html>

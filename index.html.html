@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Baixe o App Postos Pasqualotto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+(function () {
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/android/i.test(ua)) {
+    window.location.href =
+    "https://play.google.com/store/apps/details?id=com.argosistemas.postospasqualotto&pcampaignid=web_share";
+  } 
+  else if (/iPad|iPhone|iPod/.test(ua)) {
+    window.location.href =
+    "https://apps.apple.com/br/app/postos-pasqualotto/id6752565809";
+  }
+})();
+</script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+a {
+  display: block;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+.android { background: #3DDC84; }
+.ios { background: #000; }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>Baixe o App Postos Pasqualotto</h1>
+
+  <a class="android"
+     href="https://play.google.com/store/apps/details?id=com.argosistemas.postospasqualotto&pcampaignid=web_share">
+     Google Play
+  </a>
+
+  <a class="ios"
+     href="https://apps.apple.com/br/app/postos-pasqualotto/id6752565809">
+     App Store
+  </a>
+</div>
+
+</body>
+</html>

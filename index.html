@@ -22,50 +22,45 @@
 /* BACKGROUND */
 body {
   font-family: Arial, Helvetica, sans-serif;
-
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
     url("background2.jpg") no-repeat center center;
-
   background-size: contain;
   background-color: var(--preto);
-
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* CARD QUASE INVISÍVEL */
+/* CARD */
 .card {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
   border-radius: 22px;
   width: 90%;
   max-width: 360px;
   padding: 26px 22px 32px;
   text-align: center;
-
   box-shadow: 0 18px 40px rgba(0,0,0,0.5);
 }
 
-/* LOGO */
+/* LOGO — APONTANDO PARA logo.png */
 .logo {
   width: 185px;
   margin: 0 auto 24px;
   display: block;
+  background: transparent;
 }
 
-/* TÍTULO EM BRANCO */
+/* TÍTULO */
 h1 {
   font-size: 21px;
   margin-bottom: 24px;
   color: var(--branco);
 }
 
-/* BOTÕES PRETOS COM TEXTO BRANCO */
+/* BOTÕES */
 .btn {
   display: block;
   padding: 14px;
@@ -79,7 +74,6 @@ h1 {
   border: 2px solid var(--preto);
 }
 
-/* HOVER (opcional, elegante) */
 .btn:hover {
   background: #111;
 }
@@ -97,7 +91,8 @@ h1 {
 
 <div class="card">
 
-  <img src="POSTO.PNG.png" alt="Postos Pasqualotto" class="logo">
+  <!-- LOGO CORRIGIDA -->
+  <img src="logo.png" alt="Postos Pasqualotto" class="logo">
 
   <h1>Baixe o App Postos Pasqualotto</h1>
 

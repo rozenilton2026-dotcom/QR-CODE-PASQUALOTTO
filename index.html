@@ -2,69 +2,105 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Baixe o App Postos Pasqualotto</title>
+<title>App Postos Pasqualotto</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f2f2f2;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.card {
-  background: #fff;
-  padding: 28px;
-  border-radius: 14px;
-  text-align: center;
+.container {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px 26px;
   max-width: 360px;
   width: 100%;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.logo {
+  max-width: 160px;
+  margin-bottom: 20px;
 }
 
 h1 {
   font-size: 20px;
+  color: #000;
   margin-bottom: 10px;
 }
 
 p {
   font-size: 14px;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
-a {
+.button {
   display: block;
   padding: 14px;
-  margin: 10px 0;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 14px;
   color: #fff;
 }
 
-.play { background: #e30613; }
-.ios { background: #000; }
+.play {
+  background: #e30613;
+}
+
+.play:hover {
+  background: #c20510;
+}
+
+.ios {
+  background: #000000;
+}
+
+.footer {
+  font-size: 11px;
+  color: #888;
+  margin-top: 18px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="card">
-  <h1>Baixe nosso aplicativo</h1>
-  <p>Você será redirecionado automaticamente para a loja correta.</p>
+<div class="container">
 
-  <a class="play" href="https://play.google.com/store/apps/details?id=com.argosistemas.postospasqualotto&pcampaignid=web_share">
-    Google Play
+  <!-- LOGO (opcional) -->
+  <!--
+  <img src="logo.png" alt="Postos Pasqualotto" class="logo">
+  -->
+
+  <h1>Baixe o App Postos Pasqualotto</h1>
+  <p>
+    Abasteça, acompanhe promoções e aproveite vantagens exclusivas.
+    Você será direcionado automaticamente para a loja do seu celular.
+  </p>
+
+  <a class="button play" href="https://play.google.com/store/apps/details?id=com.argosistemas.postospasqualotto&pcampaignid=web_share">
+    Baixar na Google Play
   </a>
 
-  <a class="ios" href="https://apps.apple.com/br/app/postos-pasqualotto/id6752565809">
-    App Store
+  <a class="button ios" href="https://apps.apple.com/br/app/postos-pasqualotto/id6752565809">
+    Baixar na App Store
   </a>
+
+  <div class="footer">
+    © Postos Pasqualotto
+  </div>
+
 </div>
 
 <script>
